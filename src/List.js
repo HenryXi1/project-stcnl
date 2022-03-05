@@ -6,6 +6,8 @@ export default function List({ list} ) {
         {list.name}
         <br></br>
         {list.about}
+        <br></br>
+        {list.image}
     </div>
   )
 }
