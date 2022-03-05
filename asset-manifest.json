@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/project-stcnl/static/js/main.d9db19dd.js",
+    "index.html": "/project-stcnl/index.html",
+    "main.d9db19dd.js.map": "/project-stcnl/static/js/main.d9db19dd.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d9db19dd.js"
+  ]
+}
