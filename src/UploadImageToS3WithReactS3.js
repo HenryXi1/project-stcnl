@@ -6,8 +6,8 @@ window.Buffer = window.Buffer || require("buffer").Buffer;
 
 const S3_BUCKET ='listingimagestorage';
 const REGION ='us-east-2';
-const ACCESS_KEY ='AKIARACCD5DTJLHW44FZ';
-const SECRET_ACCESS_KEY ='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';
+const ACCESS_KEY ='key';
+const SECRET_ACCESS_KEY ='secretkey';
 
 const config = {
     bucketName: S3_BUCKET,
