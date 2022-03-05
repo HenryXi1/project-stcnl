@@ -3,13 +3,13 @@ import firebase from 'firebase/compat/app'
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDtpTlp5QYF2PBWO5rVrBS99K2wNOWrmZw",
-  authDomain: "image-upload-420cf.firebaseapp.com",
-  projectId: "image-upload-420cf",
-  storageBucket: "image-upload-420cf.appspot.com",
-  messagingSenderId: "91801327475",
-  appId: "1:91801327475:web:56860f7b7771805bf8d706",
-  measurementId: "G-ND307Y4S54"
+  apiKey: "AIzaSyDtrpxllj5Ncm1NIwpdktRPAU4YSc22qnw",
+  authDomain: "listing-storage.firebaseapp.com",
+  projectId: "listing-storage",
+  storageBucket: "listing-storage.appspot.com",
+  messagingSenderId: "283781611266",
+  appId: "1:283781611266:web:ca28c60c9ade19c56acc1b",
+  measurementId: "G-TMQWD51EQ6"
 };
 
 // Initialize Firebase

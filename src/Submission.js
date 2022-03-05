@@ -1,8 +1,8 @@
-import Listings from "./Listings";
 import {useState, useRef, useEffect} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import app from './FirebaseInit'
 import {Link } from "react-router-dom";
+import Listings from "./Listings";
 
 
 function App() {
@@ -47,19 +47,18 @@ function App() {
     db.settings({
       timestampsInSnapshots: true
     });
+
+    listingNameRef.current.value = null
+    listingAboutRef.current.value = null
+    
     if (!name || !about || !imageURL){
         return
     }
     const userRef = db.collection("listings").add({
-      'School Name': name,
-      Image: imageURL,
-      About: about
-    }); 
-    
-
-    listingNameRef.current.value = null
-    listingAboutRef.current.value = null
-
+      Name: name,
+      About: about,
+      Image: imageURL
+    });
 
 }
 
