@@ -2,6 +2,8 @@ import Listings from "./Listings";
 import {useState, useRef, useEffect} from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import app from './FirebaseInit'
+import {Link } from "react-router-dom";
+
 
 function App() {
   //set lists
@@ -40,16 +42,20 @@ function App() {
     const about = listingAboutRef.current.value
     const name = listingNameRef.current.value
 
-    e.preventDefault();
+    // e.preventDefault();
     const db = app.firestore();
     db.settings({
       timestampsInSnapshots: true
     });
+    if (!name || !about || !imageURL){
+        return
+    }
     const userRef = db.collection("listings").add({
       'School Name': name,
       Image: imageURL,
       About: about
     }); 
+    
 
     listingNameRef.current.value = null
     listingAboutRef.current.value = null
@@ -64,7 +70,7 @@ function App() {
   return (
     <>
       <Listings listings = {listings}/>
-      <div>Name</div>
+      <div>School Name</div>
       <input ref = {listingNameRef} type = "text"/>
       <div>About</div>
       <div>
@@ -83,8 +89,10 @@ function App() {
         <img src = {image} />
       )}
       
-      <button onClick={handleAddListing}> Submit </button>
-
+      <Link to="/">
+        <button onClick={handleAddListing}> Submit </button>
+      </Link>
+      
     </>
   )
 }
